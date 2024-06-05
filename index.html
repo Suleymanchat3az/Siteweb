@@ -8,6 +8,21 @@
     background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTl5OGt2bXRzdGpkcDh4enYwejNxZHNoZXZmazFjOHVubDZ1ZHphMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sULKEgDMX8LcI/200.webp');
     background-size: cover;
     background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+  }
+  .gift-box {
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    background-color: red;
+    display: inline-block;
+    color: black;
+  }
+  #name-display {
+    display: none;
+    font-size: 2em;
+    margin-top: 20px;
   }
 </style>
 </head>
@@ -15,7 +30,22 @@
 <h1>Téléchargement de Fichier .lnk</h1>
 <p>Cliquez sur le lien ci-dessous pour télécharger le fichier:</p>
 <a href="file:///C:/Users/andru/OneDrive/Bureau/Chrome%20-%20Copie.lnk" download="Chrome.lnk">Télécharger le fichier</a>
+
+<div class="gift-box" onclick="showName('Yildiz')">Appuyez ici pour Yildiz</div>
+<div class="gift-box" onclick="showName('Cengiz')">Appuyez ici pour Cengiz</div>
+<div class="gift-box" onclick="showName('Malik')">Appuyez ici pour Malik</div>
+
+<div id="name-display"></div>
+
+<script>
+function showName(name) {
+  var nameDisplay = document.getElementById('name-display');
+  nameDisplay.textContent = name;
+  nameDisplay.style.display = 'block';
+}
+</script>
 </body>
 </html>
+
 
 
